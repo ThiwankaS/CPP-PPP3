@@ -9,6 +9,8 @@ WARN	= -Wall -Werror -Wextra
 FLAGS	= $(WARN) $(STD) -O0 -g
 
 SRCS	= \
+	tokenizing.cpp\
+	utils.cpp\
 	main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
