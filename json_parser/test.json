@@ -1,0 +1,26 @@
+{
+    "server"    : [
+        {
+            "hostname"      : "www.example.com",
+            "host"          : "127.0.0.1",
+            "listen"        : ["8080", "8081", "8082"],
+            "error"         : {
+                "404"       : "error/400/404.html",
+                "500"       : "error/500/500.html"
+            }
+        },
+        {
+            "hostname"      : "www.test.com",
+            "host"          : "127.168.0.12",
+            "listen"        : ["9910", "9911", "9912", "9913", "9914"],
+            "routes"        : {
+                "home"      : "root/www/home/index.html",
+                "contact"   : "root/www/home/contact.html"
+            }
+        }
+    ],
+    "http"      : {
+            "some_key"      : "some_value"
+    },
+    "default_key"           : "default_value"
+}
