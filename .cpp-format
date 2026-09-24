@@ -1,0 +1,216 @@
+---
+# This is a configuration file for clang-format.
+# The `---` indicates the start of a YAML document.
+
+# Specifies the programming language to which this style applies.
+Language:        Cpp
+
+# This is a commented-out line, but it's a good practice to indicate that this configuration is based on the Google style.
+# BasedOnStyle:  Google
+
+# The indentation level for access modifiers (`public:`, `private:`, etc.) relative to the class level.
+# A negative value (e.g., -1) moves them to the left.
+AccessModifierOffset: -1
+
+# How to align parameters and arguments after an opening parenthesis.
+# `Align` will align them with the parenthesis.
+AlignAfterOpenBracket: Align
+
+# A setting to align fields in an array of structs.
+# `None` means no special alignment is applied.
+AlignArrayOfStructures: None
+
+# Whether to align consecutive preprocessor macros (`#define`).
+# `None` means macros are not aligned.
+AlignConsecutiveMacros: None
+
+# Whether to align consecutive assignment operators (`=`).
+# `None` means they are not aligned.
+AlignConsecutiveAssignments: None
+
+# Whether to align consecutive bit-field declarations.
+# `None` means they are not aligned.
+AlignConsecutiveBitFields: None
+
+# Whether to align consecutive variable declarations.
+# `None` means they are not aligned.
+AlignConsecutiveDeclarations: None
+
+# How to align escaped newlines (`\`) in a macro definition.
+# `Left` aligns them to the first column.
+AlignEscapedNewlines: Left
+
+# How to align binary operators (`+`, `-`, `*`, `/`).
+# `Align` will align the operators vertically.
+AlignOperands:   Align
+
+# Whether to align trailing comments (comments at the end of a line).
+# `true` means they will be aligned with comments on other lines.
+AlignTrailingComments: true
+
+# Allows all arguments of a function call to be placed on a new line.
+AllowAllArgumentsOnNextLine: true
+
+# Allows all parameters of a function declaration to be placed on a new line.
+AllowAllParametersOfDeclarationOnNextLine: true
+
+# Allows a single-line enum definition to stay on a single line.
+AllowShortEnumsOnASingleLine: true
+
+# Disallows short code blocks (e.g., `if (x) { y; }`) from being on a single line.
+# `Never` means they must always be broken onto multiple lines.
+AllowShortBlocksOnASingleLine: Never
+
+# Disallows a case label in a switch statement from being on the same line as the code.
+AllowShortCaseLabelsOnASingleLine: false
+
+# Allows a short function definition to be on a single line.
+# `All` allows this for all short functions.
+AllowShortFunctionsOnASingleLine: All
+
+# Allows a short lambda expression to be on a single line.
+AllowShortLambdasOnASingleLine: All
+
+# Allows a short `if` statement to be on a single line, but only if it does not have an `else` block.
+AllowShortIfStatementsOnASingleLine: WithoutElse
+
+# Allows a short loop (`for`, `while`) to be on a single line.
+AllowShortLoopsOnASingleLine: true
+
+# Specifies when to break the line after a function's return type in a definition.
+# `None` means it will not break.
+AlwaysBreakAfterDefinitionReturnType: None
+
+# Specifies when to break the line after a function's return type in a declaration.
+# `None` means it will not break.
+AlwaysBreakAfterReturnType: None
+
+# Always breaks a line before a multiline string literal.
+AlwaysBreakBeforeMultilineStrings: true
+
+# Always breaks a template declaration so that each template parameter is on its own line.
+AlwaysBreakTemplateDeclarations: Yes
+
+# A list of macros that should be treated as C++ attributes.
+AttributeMacros:
+  - __capability
+
+# Whether to pack function arguments into as few lines as possible.
+BinPackArguments: true
+
+# Whether to pack function parameters into as few lines as possible.
+BinPackParameters: true
+
+# Defines rules for how braces (`{}`) are wrapped.
+BraceWrapping:
+  # Disallows a newline after a case label's colon.
+  AfterCaseLabel:  false
+  # Disallows a newline after the class keyword.
+  AfterClass:      false
+  # Disallows a newline after a control statement (`if`, `for`, `while`).
+  AfterControlStatement: Never
+  # Disallows a newline after an enum declaration.
+  AfterEnum:       false
+  # Disallows a newline after a function declaration.
+  AfterFunction:   false
+  # Disallows a newline after a namespace declaration.
+  AfterNamespace:  false
+  # Disallows a newline after an Objective-C declaration.
+  AfterObjCDeclaration: false
+  # Disallows a newline after a struct declaration.
+  AfterStruct:     false
+  # Disallows a newline after a union declaration.
+  AfterUnion:      false
+  # Disallows a newline after an `extern "C"` block.
+  AfterExternBlock: false
+  # Disallows a newline before a `catch` block.
+  BeforeCatch:     false
+  # Disallows a newline before an `else` block.
+  BeforeElse:      false
+  # Disallows a newline before a lambda's body.
+  BeforeLambdaBody: false
+  # Disallows a newline before a `while` block.
+  BeforeWhile:     false
+  # Disallows indenting the braces themselves.
+  IndentBraces:    false
+  # Puts the opening and closing braces of an empty function on separate lines.
+  SplitEmptyFunction: true
+  # Puts the opening and closing braces of an empty struct or class on separate lines.
+  SplitEmptyRecord: true
+  # Puts the opening and closing braces of an empty namespace on separate lines.
+  SplitEmptyNamespace: true
+
+# Specifies when to break a line before a binary operator.
+# `None` means it will not break.
+BreakBeforeBinaryOperators: None
+
+# Whether to break a line before a C++20 concept declaration.
+BreakBeforeConceptDeclarations: true
+
+# Specifies where to place braces.
+# `Attach` keeps them on the same line as the preceding statement.
+BreakBeforeBraces: Attach
+
+# Disallows a line break before a comma in an inheritance list.
+BreakBeforeInheritanceComma: false
+
+# Specifies where to break the inheritance list.
+# `BeforeColon` means the break happens after the colon.
+BreakInheritanceList: BeforeColon
+
+# Whether to break a line before a ternary operator (`? :`).
+BreakBeforeTernaryOperators: true
+
+# Disallows a line break before a comma in a constructor initializer list.
+BreakConstructorInitializersBeforeComma: false
+
+# Specifies when to break a constructor initializer list.
+# `BeforeColon` means the break happens after the colon.
+BreakConstructorInitializers: BeforeColon
+
+# Whether to break a line after a Java field annotation. (This is a Java setting, not applicable to C++).
+BreakAfterJavaFieldAnnotations: false
+
+# Breaks a long string literal into multiple lines to respect the `ColumnLimit`.
+BreakStringLiterals: true
+
+# The maximum allowed line length in characters.
+ColumnLimit:     80
+
+# A regular expression for comments that should be treated as pragmas.
+CommentPragmas:  '^ IWYU pragma:'
+
+# Specifies how to align `const`/`volatile` qualifiers.
+# `Leave` means to not change their existing alignment.
+QualifierAlignment: Leave
+
+# Whether to collapse nested namespaces into a single line (e.g., `namespace a::b`).
+CompactNamespaces: false
+
+# The indentation width for a constructor initializer list.
+ConstructorInitializerIndentWidth: 4
+
+# The indentation width for line continuations.
+ContinuationIndentWidth: 4
+
+# Specifies whether to use the C++11 braced initializer list style.
+Cpp11BracedListStyle: true
+
+# Automatically detects the line ending style (LF, CRLF) from the file.
+DeriveLineEnding: true
+
+# Automatically detects the pointer alignment style from the file.
+DerivePointerAlignment: true
+
+# Whether to disable all formatting.
+DisableFormat:   false
+
+# Specifies when to insert an empty line after an access modifier.
+# `Never` means no empty line will be added.
+EmptyLineAfterAccessModifier: Never
+
+# Specifies when to insert an empty line before an access modifier.
+# `LogicalBlock` adds a line before a new access modifier block.
+EmptyLineBeforeAccessModifier: LogicalBlock
+
+# A deprecated
