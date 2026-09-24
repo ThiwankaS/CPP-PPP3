@@ -1,0 +1,32 @@
+# Compiled binaries, objects, and libraries
+*.o
+*.obj
+*.so
+*.dylib
+*.a
+*.exe
+*.out
+temp
+hotspot
+
+# Build directory & tool caches
+build/
+bin/
+.cache/
+
+# Profiling, benchmarking, and tracing artifacts
+perf.data*
+callgrind.out*
+gmon.out
+*.csv
+output.txt
+
+# Editor and IDE metadata
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS artifacts
+.DS_Store
+Thumbs.db
