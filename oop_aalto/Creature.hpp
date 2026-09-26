@@ -1,0 +1,19 @@
+#include <string>
+#include <vector>
+#include <iostream>
+
+class Creature {
+    public:
+        Creature(const std::string& name, const std::string& type, int hp)
+            : name_(name), type_(type), hitpoints_(hp) {
+        }
+
+        const std::string& GetName() const { return name_; }
+        const std::string& GetType() const { return type_; }
+        int GetHitPoints() const { return hitpoints_; }
+        
+    private:
+        std::string         name_;
+        const std::string   type_;
+        int                 hitpoints_;
+};
