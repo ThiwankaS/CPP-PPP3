@@ -1,6 +1,7 @@
+#ifndef _CREATURE_HPP_
+#define _CREATURE_HPP_
+
 #include <string>
-#include <vector>
-#include <iostream>
 
 class Creature {
     public:
@@ -17,3 +18,6 @@ class Creature {
         const std::string   type_;
         int                 hitpoints_;
 };
+
+#endif //! _CREATURE_HPP_
+
