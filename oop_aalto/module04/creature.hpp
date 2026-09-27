@@ -12,6 +12,9 @@ class Creature {
         const std::string& GetName() const { return name_; }
         const std::string& GetType() const { return type_; }
         int GetHitPoints() const { return hitpoints_; }
+
+        friend class SomeClass;
+        friend void print_temp(const Creature& c);
         
     private:
         std::string         name_;
@@ -20,4 +23,3 @@ class Creature {
 };
 
 #endif //! _CREATURE_HPP_
-
