@@ -13,8 +13,14 @@ class Creature {
         const std::string& GetType() const { return type_; }
         int GetHitPoints() const { return hitpoints_; }
 
+        virtual const std::string WarCry(void) const {
+            return "(nothing!)";
+        };
+
+        virtual ~Creature() = default;
+
         friend class SomeClass;
-        friend void print_temp(const Creature& c);
+        friend void print_temp(const Creature* c);
         
     private:
         std::string         name_;

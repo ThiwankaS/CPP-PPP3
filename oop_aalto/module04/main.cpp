@@ -3,17 +3,20 @@
 #include "troll.hpp"
 #include "some_class.hpp"
 
+#include <cstddef>
 #include <cstdlib>
 #include <iostream>
 #include <vector>
 #include <ctime>
 
-void print(const std::vector<Creature>& monsters) {
+void print(const std::vector<Creature *>& monsters) {
     std::cout << "List of monsters : \n";
+    
     if(monsters.empty()) {
         std::cout << "empty!\n";
         return;
     }
+
     for(auto monster : monsters) {
         print_temp(monster);
     }
@@ -22,21 +25,18 @@ void print(const std::vector<Creature>& monsters) {
 int main(void) {
 
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
-    Dragon dragon("Rhaegal");
+    std::vector<Creature *> monsters;
 
-    Troll troll = Troll::CreateOne();
-
-    std::cout << troll.GetName() << " has " << troll.GetHitPoints() << " points\n";
-
-    std::vector<Creature> monsters;
-    monsters.push_back(troll);
-    monsters.push_back(dragon);
-    monsters.push_back(Dragon("Viserion"));
+    for(size_t i = 0; i < 10; i++) {
+        monsters.push_back(Troll::CreateOne());
+        monsters.push_back(Dragon::CreateOne());
+    }
 
     print(monsters);
 
-    SomeClass sc;
-    sc.check(troll);
+    for(auto it : monsters) {
+        delete it;
+    }
 
     return EXIT_SUCCESS;
 }
