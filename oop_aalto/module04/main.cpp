@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <vector>
+#include <ctime>
 
 void print(const std::vector<Creature>& monsters) {
     std::cout << "List of monsters : \n";
@@ -19,10 +20,12 @@ void print(const std::vector<Creature>& monsters) {
 }
 
 int main(void) {
-    Troll troll("Diiba");
+
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
     Dragon dragon("Rhaegal");
 
-    Creature cr = troll;
+    Troll troll = Troll::CreateOne();
+
     std::cout << troll.GetName() << " has " << troll.GetHitPoints() << " points\n";
 
     std::vector<Creature> monsters;
@@ -33,7 +36,7 @@ int main(void) {
     print(monsters);
 
     SomeClass sc;
-    sc.check(cr);
+    sc.check(troll);
 
     return EXIT_SUCCESS;
 }
